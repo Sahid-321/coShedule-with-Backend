@@ -1,0 +1,133 @@
+{
+  "story": [
+    {
+      "id": 1,
+      "imageSrc": "https://media.coschedule.com/uploads/on24-logo-white.png",
+      "title": "How One Marketing Team Quadrupled Their Content And Drove 1,412% More Organic Traffic To Their Blog",
+      "read":"Read More",
+      "type":"technology"
+    },
+    {
+      "id": 2,
+      "imageSrc": "https://media.coschedule.com/uploads/simpleview-logo-02.png",
+      "title": "Simpleview Completes 5x More Marketing Projects Every Month Using CoSchedule's Marketing Suite",
+      "read":"Read More",
+      "type":"technology"
+    },
+    {
+      "id": 3,
+      "imageSrc": "https://media.coschedule.com/uploads/amp-my-brand-logo-white.png",
+      "title": "How This Marketing Agency Drives Social Media Growth For 16 Franchisee Clients",
+      "read":"Read More",
+      "type":"agency"
+    },
+    {
+      "id": 4,
+      "imageSrc": "https://media.coschedule.com/uploads/2020/04/UofSC_Alumni_P_Vertical_White_Garnet_RGB-02.png",
+      "title": "This 5-Person Marketing Team Managed 12x More Work While Working Remotely ",
+      "read":"Read More",
+      "type":"higher-education"
+    },
+    {
+      "id": 5,
+      "imageSrc": "https://media.coschedule.com/uploads/laerdal-logo-white.png",
+      "title": "Laerdal’s Global Marketing Team Increased Visibility By Centralizing Their Marketing Efforts with Marketing Suite by CoSchedule",
+      "read":"Read More",
+      "type":"b2b"
+    },
+    {
+      "id": 6,
+      "imageSrc": "https://media.coschedule.com/uploads/amp-my-brand-logo-white.png",
+      "title": "How This Marketing Agency Drives Social Media Growth For 16 Franchisee Clients",
+      "read":"Read More",
+      "type":"b2b"
+    },
+    {
+      "id": 7,
+      "imageSrc": "https://media.coschedule.com/uploads/on24-logo-white.png",
+      "title": "How One Marketing Team Quadrupled Their Content And Drove 1,412% More Organic Traffic To Their Blog",
+      "read":"Read More",
+      "type":"b2b"
+    },
+    {
+      "id": 8,
+      "imageSrc": "https://media.coschedule.com/uploads/graebel-logo-white.png",
+      "title": "How This Global Brand Transformed Complex, Multi-Tool Marketing Into A Simplified Workflow",
+      "read":"Read More",
+      "type":"b2b"
+    },
+    {
+      "id": 9,
+      "imageSrc": "https://media.coschedule.com/uploads/simpleview-logo-02.png",
+      "title": "Simpleview Completes 5x More Marketing Projects Every Month Using CoSchedule's Marketing Suite",
+      "read":"Read More",
+      "type":"b2b"
+    },
+    {
+      "id": 10,
+      "imageSrc": "https://media.coschedule.com/uploads/2020/04/UofSC_Alumni_P_Vertical_White_Garnet_RGB-02.png",
+      "title": "This 5-Person Marketing Team Managed 12x More Work While Working Remotely",
+      "read":"Read More",
+      "type":"b2c"
+    },
+    {
+      "id": 11,
+      "imageSrc": "https://media.coschedule.com/uploads/umass-memorial-logo-white.png",
+      "title": "How This Healthcare Company Created Instant Workload Visibility Across 3 Teams With Marketing Suite by CoSchedule",
+      "read":"Read More",
+      "type":"b2c"
+    },
+    {
+      "id": 12,
+      "imageSrc": "https://media.coschedule.com/uploads/2020/04/UofSC_Alumni_P_Vertical_White_Garnet_RGB-02.png",
+      "title": "This 5-Person Marketing Team Managed 12x More Work While Working Remotely ",
+      "read":"Read More",
+      "type":"all"
+    },
+    {
+      "id": 13,
+      "imageSrc": "https://media.coschedule.com/uploads/umass-memorial-logo-white.png",
+      "title": "How This Healthcare Company Created Instant Workload Visibility Across 3 Teams With Marketing Suite by CoSchedule",
+      "read":"Read More",
+      "type":"all"
+    },
+    {
+      "id": 14,
+      "imageSrc": "https://media.coschedule.com/uploads/laerdal-logo-white.png",
+      "title": "Laerdal’s Global Marketing Team Increased Visibility By Centralizing Their Marketing Efforts with Marketing Suite by CoSchedule",
+      "read":"Read More",
+      "type":"all"
+    },
+    {
+      "id": 15,
+      "imageSrc": "https://media.coschedule.com/uploads/amp-my-brand-logo-white.png",
+      "title": "How This Marketing Agency Drives Social Media Growth For 16 Franchisee Clients",
+      "read":"Read More",
+      "type":"all"
+    },
+    {
+      "id": 16,
+      "imageSrc": "https://media.coschedule.com/uploads/on24-logo-white.png",
+      "title": "How One Marketing Team Quadrupled Their Content And Drove 1,412% More Organic Traffic To Their Blog",
+      "read":"Read More",
+      "type":"all"
+    },
+    {
+      "id": 17,
+      "imageSrc": "https://media.coschedule.com/uploads/graebel-logo-white.png",
+      "title": "How This Global Brand Transformed Complex, Multi-Tool Marketing Into A Simplified Workflow",
+      "read":"Read More",
+      "type":"all"
+    },
+    {
+      "id": 18,
+      "imageSrc": "https://media.coschedule.com/uploads/simpleview-logo-02.png",
+      "title": "Simpleview Completes 5x More Marketing Projects Every Month Using CoSchedule's Marketing Suite",
+      "read":"Read More",
+      "type":"all"
+    }
+  
+    
+  ]
+  
+}
