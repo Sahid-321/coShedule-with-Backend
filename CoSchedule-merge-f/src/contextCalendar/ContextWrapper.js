@@ -50,7 +50,15 @@ export default function ContextWrapper(props) {
   }, [savedEvents, labels]);
 
   useEffect(() => {
-    localStorage.setItem("savedEvents", JSON.stringify(savedEvents));
+  fetch(`http://localhost:3002/createtask`,{
+    method : "POST",
+    body : JSON.stringify(savedEvents),
+    headers : {
+      "Content-Type" : "application/json"
+    }
+  })
+
+    // localStorage.setItem("savedEvents", JSON.stringify(savedEvents));
   }, [savedEvents]);
 
   useEffect(() => {
