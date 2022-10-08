@@ -7,4 +7,5 @@ const postRoutes = express.Router()
 postRoutes.get('/gettask',getalltask);
 postRoutes.post('/createtask',createtask);
 
-module.exports = {postRoutes};
+
+module.exports = {postRoutes}

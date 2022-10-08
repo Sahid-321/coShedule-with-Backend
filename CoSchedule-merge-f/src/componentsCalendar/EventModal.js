@@ -39,6 +39,15 @@ export default function EventModal() {
       day: daySelected.valueOf(),
       id: selectedEvent ? selectedEvent.id : Date.now(),
     };
+    console.log(calendarEvent)
+    
+    fetch(`http://localhost:3002/createtask`,{
+      method : "POST",
+      body : JSON.stringify(calendarEvent),
+      headers : {
+        "Content-Type" : "application/json"
+      }
+     })
     if (selectedEvent) {
       dispatchCalEvent({ type: "update", payload: calendarEvent });
     } else {

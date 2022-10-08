@@ -20,9 +20,11 @@ function savedEventsReducer(state, { type, payload }) {
     default:
       throw new Error();
   }
+
 }
 function initEvents() {
   const storageEvents = localStorage.getItem("savedEvents");
+  // console.log(storageEvents)
   const parsedEvents = storageEvents ? JSON.parse(storageEvents) : [];
   return parsedEvents;
 }
@@ -34,12 +36,13 @@ export default function ContextWrapper(props) {
   const [showEventModal, setShowEventModal] = useState(false);
   const [selectedEvent, setSelectedEvent] = useState(null);
   const [labels, setLabels] = useState([]);
+
   const [savedEvents, dispatchCalEvent] = useReducer(
     savedEventsReducer,
     [],
     initEvents
   );
-
+// console.log(savedEvents)
   const filteredEvents = useMemo(() => {
     return savedEvents.filter((evt) =>
       labels
@@ -50,9 +53,10 @@ export default function ContextWrapper(props) {
   }, [savedEvents, labels]);
 
   useEffect(() => {
+  
   fetch(`http://localhost:3002/createtask`,{
     method : "POST",
-    body : JSON.stringify(savedEvents),
+    body : JSON.stringify(dispatchCalEvent),
     headers : {
       "Content-Type" : "application/json"
     }

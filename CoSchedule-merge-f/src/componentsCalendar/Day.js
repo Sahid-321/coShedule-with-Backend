@@ -4,6 +4,7 @@ import GlobalContext from "../contextCalendar/GlobalContext";
 
 export default function Day({ day, rowIdx }) {
   const [dayEvents, setDayEvents] = useState([]);
+
   const {
     setDaySelected,
     setShowEventModal,
@@ -16,7 +17,11 @@ export default function Day({ day, rowIdx }) {
       (evt) =>
         dayjs(evt.day).format("DD-MM-YY") === day.format("DD-MM-YY")
     );
-    setDayEvents(events);
+    // fetch(`http://localhost:3002/gettask`)
+    // .then((res)=>res.json())
+    // .then((res)=>setData(res))
+    
+  setDayEvents(events);
   }, [filteredEvents, day]);
 
   function getCurrentDayClass() {

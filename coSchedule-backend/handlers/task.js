@@ -5,7 +5,7 @@ const getalltask = async (req,res)=>{
 try {
     const {token} = req.headers;
     let user = jwt.decode(token)
-    const post = await postModal.findOne({user})
+    const post = await postModal.find({user})
     return res.status(200).send(post);
 } catch (error) {
     return res.status(500).send({message: error.message});
