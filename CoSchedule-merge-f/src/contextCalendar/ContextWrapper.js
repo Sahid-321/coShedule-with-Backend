@@ -62,7 +62,7 @@ export default function ContextWrapper(props) {
     }
   })
 
-    // localStorage.setItem("savedEvents", JSON.stringify(savedEvents));
+    localStorage.setItem("savedEvents", JSON.stringify(savedEvents));
   }, [savedEvents]);
 
   useEffect(() => {

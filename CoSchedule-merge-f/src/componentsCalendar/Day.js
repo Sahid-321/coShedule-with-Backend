@@ -19,7 +19,9 @@ export default function Day({ day, rowIdx }) {
     );
     // fetch(`http://localhost:3002/gettask`)
     // .then((res)=>res.json())
-    // .then((res)=>setData(res))
+    // .then((res)=>{ setDayEvents(res)
+    // console.log(res)
+    // })
     
   setDayEvents(events);
   }, [filteredEvents, day]);
