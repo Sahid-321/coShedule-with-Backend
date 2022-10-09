@@ -4,22 +4,20 @@ const jwt = require('jsonwebtoken');
 
 const signUpFn = async (req,res)=>{
     try {
-        const newUser = req.body
-        console.log(newUser)
-        const checkUser  = await userModal.findOne({email : newUser.email});
-        
-      if(checkUser){
-        res.status(400).send({message :'User already exist!'})
-      }
-       let user = new userModal(newUser);
-       await user.save();
-       user = user.toJSON();
-        delete user.password;
-        res.status(200).send(user)
-
-    } catch (error) {
-        return res.status(500).send({message: error.message});   
-     }
+        const user = req.body;
+        // console.log(user);
+        const check = await userModal.findOne({email: user.email});
+        if (check) {
+            return res.status(400).send({message: 'User already exists'});
+        }
+        let newUser = await userModal.create(user);
+        newUser = newUser.toJSON();
+        delete newUser.password;
+        return res.status(200).send(newUser);
+    } catch (err) {
+        return res.status(500).send(err);
+    }
+  
 }
 
 const loginFn = async (req,res)=>{
