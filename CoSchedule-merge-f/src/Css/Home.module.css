@@ -1,6 +1,7 @@
 body {
   font-family: " MuseoSans";
   font-family: " MuseoSans300";
+
 }
 .heading {
   color: #4b4b4b;
@@ -41,6 +42,7 @@ body {
   transition-duration: 0.2s;
   transition-timing-function: ease-in-out;
   transition-delay: 0s;
+ margin-left: 500px;
 }
 .button:hover {
   background-color: #f16b45;

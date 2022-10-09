@@ -2,48 +2,39 @@ import React, { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import styles from "../Css/createcalendar.module.css";
 const Signup = () => {
-  const navigate = useNavigate();
-
-  const [user, setUser] = useState({
-    name: "",
-    email: "",
-    password: "",
-  });
-
-  let name, value;
-  const handleInput = (e) => {
-    name = e.target.name;
-    value = e.target.value;
-
-    setUser({ ...user, [name]: value });
-  };
-  const PostData = async (e) => {
-    e.preventDefault();
-    const { name, email, password } = user;
-
-    const res = await fetch("http://localhost:8080/signup", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        name,
-        email,
-        password,
-      }),
-      
-    });
-
-    const data = await res.json();
-    if (res.status === 422 || !data) {
-      window.alert("Invalid Registration");
-      console.log("Invalid Registration");
-    } else {
-      window.alert("Registration Success");
-      console.log("Registration Success");
-
-      navigate("/Signin");
-    }
+  const [email, setEmail] = React.useState('');
+    const [password, setPassword] = React.useState('');
+    const [name, setName] = React.useState('');
+    const navigate = useNavigate();
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        const user = {
+          email: email,
+          password: password,
+          name: name
+        }
+    
+        try {
+          let data = await fetch('http://localhost:3002/user/signup', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(user)
+          });
+          let response = await data.json();
+          // console.log(response);
+          if(response.message){
+            alert(response.message);
+          }
+          else{
+            alert("Signup Successful");
+            navigate("/Signin");
+          }
+    
+        } catch (error) {
+          console.log(error);
+        }
   };
   return (
     <div className={styles.calendarDiv}>
@@ -57,16 +48,16 @@ const Signup = () => {
       </div>
 
       <div className={styles.formDiv}>
-        <form method="POST">
+        <form method="POST" onSubmit={handleSubmit}>
           <div className={styles.formComponent}>
             <label className={styles.formComponent_label}>Full Name</label>
             <br />
             <input
               className={styles.formComponent_input}
               type="text"
-              value={user.name}
+              value={name}
               name="name"
-              onChange={handleInput}
+              onChange={(e)=>{setName(e.target.value)}}
               required
               placeholder="Full Name"
             />
@@ -78,9 +69,9 @@ const Signup = () => {
             <input
               className={styles.formComponent_input}
               type="email"
-              value={user.email}
+              value={email}
               name="email"
-              onChange={handleInput}
+              onChange={(e)=>{setEmail(e.target.value)}}
               required
               placeholder="Work Email Address"
             />
@@ -91,9 +82,9 @@ const Signup = () => {
             <input
               className={styles.formComponent_input}
               type="password"
-              value={user.password}
+              value={password}
               name="password"
-              onChange={handleInput}
+              onChange={(e)=>{setPassword(e.target.value)}}
               required
               placeholder="Password  ( minimum 8 characters )"
             />
@@ -103,7 +94,7 @@ const Signup = () => {
             className={styles.nextSubmitBtn}
             type="submit"
             value="Get Started "
-            onClick={PostData}
+            // onClick={PostData}
           />
         </form>
         <NavLink to="/Signin">Already have account</NavLink>

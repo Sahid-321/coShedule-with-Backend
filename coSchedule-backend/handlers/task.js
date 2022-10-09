@@ -17,8 +17,7 @@ const createtask = async (req,res)=>{
         const {token} = req.headers;
         let user = jwt.decode(token);
         let note = req.body;
-        
-        // note.user = user.id;
+    
         note = new postModal(note);
         await note.save();
         console.log(note)

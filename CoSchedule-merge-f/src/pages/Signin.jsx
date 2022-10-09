@@ -5,32 +5,42 @@ import { useNavigate, NavLink, Link } from "react-router-dom";
 
 const Signin = () => {
 
-    const navigate = useNavigate();
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const [DATA, setDATA] = useState([]);
+    const navigate = useNavigate();
 
-    const loginUser =  (e) => {
+
+    const handleSubmit = async (e) => {
         e.preventDefault();
-
-        // const res = await fetch("http://localhost:5000/signup", {
-        //     method: "POST",
-        //     headers: {
-        //         "Content-Types": "application/json",
-        //     },
-        //     body: JSON.stringify({
-        //         email,
-        //         password,
-        //     }),
-
-            
-        // });
-
-        // const data = res.json();
-
+        const body = {
+          email,
+          password
+        }
+        try {
+          let data = await fetch('http://localhost:3002/user/login',{
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(body)
+          })
+          let response = await data.json();
+          if(!response){
+            alert('login success');
+            navigate("/Home");        
+          }
+          else{
+            alert(response.message);
+          }
+       
+          
     
-            window.alert("Login Sucessfull");
-            navigate("/Home");
+        } catch (error) {
+          console.log(error);
+        }
+    
+            
+            
         
     };
 
@@ -58,7 +68,7 @@ const Signin = () => {
                 </Link>
                 <br />
 
-                <form method="POST">
+                <form onSubmit={handleSubmit}>
                     <div className={styles.formComponent}>
                         <label className={styles.formComponent_label}>EMAIL ADDRESS</label>
                         <br />
@@ -91,8 +101,8 @@ const Signin = () => {
                         <input
                             className={styles.SigninBtn}
                             type="submit"
-                            onClick={loginUser}
-                            value="Sign In"
+                            // onClick={loginUser}
+                            value="Login"
                         />
                     </div>
                 </form>

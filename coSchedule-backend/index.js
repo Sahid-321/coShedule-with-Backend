@@ -2,6 +2,7 @@ const express = require('express');
 const connectDatabase = require('./Database/index');
 const cors = require("cors");
 const {postRoutes} = require('./Routes/task')
+const { userRoutes } = require('./Routes/user');
 const app = express()
 app.use(express.json())
 app.use(cors())
@@ -20,7 +21,7 @@ function setRequest(req, res, next) {
 app.use(logger)
 app.use(setRequest)
 app.use(postRoutes)
-
+app.use(userRoutes)
 let PORT = 3002; 
 connectDatabase().then(()=>{
     app.listen(PORT,()=>{
