@@ -7,7 +7,7 @@
 
 
 ## 🛠 Skills
-React, Redux, Chakra Ui, Meterial Ui, JSON Server,express,mongoDB
+React, Chakra Ui, Meterial Ui, JSON Server,express,mongoDB
 
 
 
