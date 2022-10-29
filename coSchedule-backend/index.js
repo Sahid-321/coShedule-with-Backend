@@ -18,10 +18,10 @@ function setRequest(req, res, next) {
     next();
 }
 
-// app.use(logger)
-// app.use(setRequest)
-// app.use(postRoutes)
-// app.use(userRoutes)
+app.use(logger)
+app.use(setRequest)
+app.use(postRoutes)
+app.use(userRoutes)
 let PORT = 3002; 
 connectDatabase().then(()=>{
     app.listen(PORT,()=>{
