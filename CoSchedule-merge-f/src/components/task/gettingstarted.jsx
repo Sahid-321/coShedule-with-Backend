@@ -15,8 +15,6 @@ import styled from "styled-components";
   const Bodyp = styled.p`
   font-size : 10px;
   color : gray
-  
-  
   `
   const Move = styled(FaAngleRight)`
   color : gray;
@@ -164,7 +162,7 @@ export const Gettingstarted = ()=> {
             borderRadius = "10px"
             padding="20px"
             >
-                <Flex style={{alignItems : "center"}}>
+               <Flex style={{alignItems : "center"}}>
                     <Right />
                     <div>
             <Headp class="margin-0 bold margin-bottom-5">Customize your calendar</Headp>
@@ -173,7 +171,6 @@ export const Gettingstarted = ()=> {
           </div>
             <Move />
           </Flex>
-      
             </Box>
             </Box>
            <Box h="fit-content" mt="20" justifyContent="center"display={matches ? "block " : "none"}>
@@ -183,14 +180,6 @@ export const Gettingstarted = ()=> {
            </Box>
         </Box>
         </>
-      
-  
-    )
-         
-            
-             
-          
-          
-         
-    
+     
+    ) 
 }
