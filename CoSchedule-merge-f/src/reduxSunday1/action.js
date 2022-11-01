@@ -14,8 +14,8 @@ export const loadUsers = () =>{
         axios
         .get(`http://localhost:8080/user`)
         .then((resp)=> {
-            console.log("resp", resp);
-            dispatch(getUsers(resp.data));
+           console.log("resp", resp);
+           dispatch(getUsers(resp.data));
         })
         .catch((error) => console.log(error));
     }
