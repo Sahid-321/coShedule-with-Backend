@@ -7,12 +7,8 @@ import {useDispatch, useSelector} from "react-redux"
 import {useNavigate} from "react-router-dom"
 import Sidebar from "../components/Navbar/sidebar"
 
-
 const Calendar = ()=>{
-
   const navigate = useNavigate()
-
-
 let dispatch = useDispatch();
 const {users} = useSelector(state => state.data)
 
@@ -21,34 +17,21 @@ useEffect(()=>{
 
 dispatch(loadUsers());
 
-
-
 },[]);
-
-
 const [state, setState] = useState({
     name: "",
-
 });
-
 const [state1, setState1] = useState({
     name: "",
 
 });
-
-
   //let{id} = useParams()
-
   const {name} = state;
- 
-  
 const handleUpdate = (id)=>{
    // e.preventDefault();
 
     dispatch(updateUser(state, id));
      window.location.reload();
-   
-  
 }
 const [number, setNumber] = useState(0)
 const [form, setForm] = useState(false);
@@ -58,15 +41,11 @@ const handleInput = (id)=>{
    console.log("input");
    setForm(true)
   setNumber(id)
-
  
 }
 console.log("number",number);
-
 // for inputs
 // 
-
-
 const handleSubmit = (id)=>{
     dispatch(updateUser(state1,id))
     setForm(false)
@@ -83,14 +62,8 @@ return(
 <>
 <div className="baap"> 
 <div className="sideBar"><Sidebar/></div>
-
-
-
-
 {form ? 
-
 <div className="divForm">
-
 <form onSubmit={()=>handleSubmit(number)}>
 
         <input id="text"
@@ -106,8 +79,6 @@ return(
 
     </div>
   : 
-
-
 <div className="parent"> 
 {/* <div className="btnDiv" >
     <button className="btn">+ create</button>
@@ -123,38 +94,19 @@ return(
 <p>FRIDAY</p>
 <p>SATURDAY</p>
 </div>
- 
-
 <div className="mapParent">
-
-
-
-
  {users && users.map((elem) => { return(
     
- 
  <div className="mapContainer">   <div className="mapDayName"><b> 
    {elem.dayName} <p>Day {elem.id}</p>  <h3 onClick={()=>handleInput(elem.id)}> < VscAdd/>  </h3> </b> 
     {elem.name ===""? false:<div
      className="mapBox"> <b>{elem.name} </b> <i onClick={()=>handleUpdate(elem.id)}><IoIosCloseCircleOutline/></i>  </div>}</div>
- 
- 
  </div>
- 
-
 )})} 
 </div>
-
 </div>
 }
-
 </div>
 </>
-
-
-
-)
-
-
-}
+)}
 export default Calendar;
