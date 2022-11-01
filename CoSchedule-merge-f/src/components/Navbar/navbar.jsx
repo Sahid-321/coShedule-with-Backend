@@ -19,13 +19,11 @@ export const Navbar = ()=> {
                             changeNavSize("large")
                         else
                             changeNavSize("small")
-                    }
-                        
-                       
+                       }    
                     }
                 />
                 <Slide direction='left' in={isOpen} style={{ zIndex: 10 }}>
- <Sidebar />
+       <Sidebar />
                 </Slide>
         </Box>
     )
