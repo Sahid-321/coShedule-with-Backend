@@ -9,7 +9,6 @@ const labelsClasses = [
   "red",
   "purple",
 ];
-
 export default function EventModal() {
   const {
     setShowEventModal,
