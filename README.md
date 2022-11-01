@@ -23,7 +23,7 @@ By co schedule we can reprioritize to handle the new tasks.
 - Live previews
 - Fullscreen mode
 - Other Supporting Pages
-- 
+
 ## Authors
 - Sahid Jamal
 - MD Talib
