@@ -17,7 +17,7 @@ const Home = () => {
         for&nbsp;marketers.
       </p>
       <Link className={styles.button} as={ReachLink} to="/SignIn">
-        Get Started Free
+       Get Started Free
       </Link>
 
       <p className={styles.small}>Why not? it's free forever</p>
@@ -27,7 +27,7 @@ const Home = () => {
         alt="p"
       />
       <h2 className={styles.heading2}>
-        30,000 marketers start their day with&nbsp;CoSchedule
+       30,000 marketers start their day with&nbsp;CoSchedule
       </h2>
       <div className={styles.container}>
         <div className={styles.second_container}>
