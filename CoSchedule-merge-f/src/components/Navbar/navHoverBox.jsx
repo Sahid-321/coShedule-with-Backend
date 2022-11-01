@@ -8,7 +8,7 @@ import {
 
 export default function NavHoverBox({ title, icon, description }) {
     return (
-        <>
+         <>
             <Flex
                 pos="absolute"
                 mt="calc(100px - 7.5px)"
@@ -29,11 +29,11 @@ export default function NavHoverBox({ title, icon, description }) {
                 borderRadius="10px"
                 color="#fff"
                 textAlign="center"
-            >
+             >
                 <Icon as={icon} fontSize="3xl" mb={4} />
                 <Heading size="md" fontWeight="normal">{title}</Heading>
                 <Text>{description}</Text>
             </Flex>
-        </>
+         </>
     )
 }
