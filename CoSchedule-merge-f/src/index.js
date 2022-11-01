@@ -12,7 +12,6 @@ import "./font/Museo Sans 700.ttf";
 import "./font/Museo Sans 300 Regular.ttf";
 
 import ContextWrapper from "./contextCalendar/ContextWrapper"
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <Provider store={store}>
