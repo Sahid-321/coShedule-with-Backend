@@ -12,20 +12,15 @@ import CalendarMain from "../componentsCalendar/calendarMain";
 const AllRoutes = () => {
   return (
     <div>
-    
-     
       <Routes>
         <Route path ="/" element ={ <Home />}/>
         <Route path ="/SignIn" element ={ <Signin />}/>
         <Route path ="/CalendarMain" element ={ <CalendarMain />}/>
         <Route path ="/Home" element ={ <Homepage />}/>
         <Route path="/Signup" element={<Signup />} />
-        <Route path="/Signin" element={<Signin />} />
-       
-            
+        <Route path="/Signin" element={<Signin />} />  
         {/* <Route path="/MarkSuit" element={<Marksuit/>}/> */}
       </Routes>
-     
     </div>
   );
 };
