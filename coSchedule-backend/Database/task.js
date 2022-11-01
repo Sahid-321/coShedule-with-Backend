@@ -11,10 +11,8 @@ const task =new mongoose.Schema({
     }
 
 },{
-    
     timestamps: true
 })
-
 const postModal = mongoose.model("task",task);
 
 module.exports = postModal
