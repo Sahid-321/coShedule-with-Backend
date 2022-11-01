@@ -21,7 +21,7 @@ const Signup = () => {
               'Content-Type': 'application/json'
             },
             body: JSON.stringify(user)
-          });
+           });
           let response = await data.json();
           // console.log(response);
           if(response.message){
@@ -34,7 +34,7 @@ const Signup = () => {
     
         } catch (error) {
           console.log(error);
-        }
+       }
   };
   return (
     <div className={styles.calendarDiv}>
