@@ -4,7 +4,6 @@ const initialState = {
     user: {},
     loading: true,
 }
-
 const usersReducers = (state= initialState, action) =>{
     switch(action.type) {
         case types.GET_USERS:
@@ -18,12 +17,9 @@ const usersReducers = (state= initialState, action) =>{
                     ...state,
                     loading: false,
                 }
-            
         default:
             return state;
-    }
-   
+    } 
 }
-
 export default usersReducers;
 
