@@ -18,12 +18,10 @@ background : #666;
 width : 100%;
 
 `
-  
 export const Notificationpanel= ()=> {
   const [matches, setMatches] = useState(
     window.matchMedia("(min-width: 768px)").matches
   )
-
   useEffect(() => {
     window
     .matchMedia("(min-width: 768px)")
@@ -31,7 +29,6 @@ export const Notificationpanel= ()=> {
   }, []);
     return (
         <Flex mt="5" w="30%" display={matches ? "block" : "none"} justifyContent="space-around" 
-        
         >
         <Box
          h="full" borderRadius="10px"
@@ -58,17 +55,10 @@ export const Notificationpanel= ()=> {
     </TabPanel>
   </TabPanels>
 </Tabs>
-
         </Box>
         </Box>
       </Flex>
   
     )
-         
-            
-             
-          
-          
-         
-    
+   
 }
