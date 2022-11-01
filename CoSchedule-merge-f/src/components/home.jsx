@@ -8,7 +8,6 @@ return (
     <Sidebar />
     <Taskpanel />
     <Notificationpanel/>
-    
     </div>
-)
+  )
 }
