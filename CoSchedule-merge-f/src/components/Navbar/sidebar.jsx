@@ -26,9 +26,7 @@ import NavItem from './navitem'
 // color: white
 // `
 
-
 export default function Sidebar() {
-
     const [navSize, changeNavSize] = useState("small")
     return (
         <Flex
