@@ -7,17 +7,14 @@ const app = express()
 app.use(express.json())
 app.use(cors())
 
-
 function logger (req,res,next) {
     console.log(req.path, new Date());
     next()
 }
-
 function setRequest(req, res, next) {
     req.context = {} 
     next();
 }
-
 app.use(logger)
 app.use(setRequest)
 app.use(postRoutes)
