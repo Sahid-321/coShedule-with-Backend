@@ -42,7 +42,7 @@ export default function WithSubnavigation() {
         borderColor={useColorModeValue("gray.200", "gray.900")}
         align={"center"}
         className={styles.heading}
-      >
+       >
         {" "}
         <Link as={ReachLink} to="/">
           <img
@@ -55,7 +55,7 @@ export default function WithSubnavigation() {
           flex={{ base: 1, md: "auto" }}
           ml={{ base: -2 }}
           display={{ base: "flex", md: "none" }}
-        >
+         >
           <IconButton
             onClick={onToggle}
             icon={
@@ -71,7 +71,6 @@ export default function WithSubnavigation() {
             fontFamily={"heading"}
             color={useColorModeValue("gray.800", "white")}
           ></Text>
-
           <Flex display={{ base: "none", md: "flex" }} ml={10}>
             <DesktopNav />
           </Flex>
