@@ -13,7 +13,7 @@ import {
   chakra,
   useColorModeValue,
 } from '@chakra-ui/react';
-import {
+ import {
   FaTwitter,
   FaYoutube,
   FaInstagram,
@@ -22,7 +22,7 @@ import {
 } from 'react-icons/fa';
 
 const ListHeader = ({ children }) => {
-  return (
+ return (
     <Text fontWeight={'500'} fontSize={'lg'} mb={2}>
       {children}
     </Text>
