@@ -9,14 +9,12 @@ import EventModal from "./EventModal";
 import App from "../App";
 
 function CalendarMain() {
-
   const [currenMonth, setCurrentMonth] = useState(getMonth());
   const { monthIndex, showEventModal } = useContext(GlobalContext);
 
   useEffect(() => {
     setCurrentMonth(getMonth(monthIndex));
   }, [monthIndex]);
-
 
   return (
     <React.Fragment>
@@ -29,8 +27,6 @@ function CalendarMain() {
           <Month month={currenMonth} />
         </div>
       </div>
-
- 
     </React.Fragment>
   );
 }
