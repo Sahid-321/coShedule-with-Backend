@@ -14,10 +14,16 @@ CoSchedule is going to help you spend less time on the unproductive parts of you
 By co schedule we can reprioritize to handle the new tasks.
 
 ## Features
+```
+ - Sign Up
+ - Login
+-  Create My Calendar
+-  Add, Filter, Search and Delete Task
+ - Other Supporting Pages
 - Light/dark mode toggle
 - Live previews
 - Fullscreen mode
-
+```
 ## Authors
 - Sahid Jamal
 - MD Talib
