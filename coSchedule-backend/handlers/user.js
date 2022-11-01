@@ -17,7 +17,6 @@ const signUpFn = async (req,res)=>{
     } catch (err) {
         return res.status(500).send(err);
     }
-  
 }
 
 const loginFn = async (req,res)=>{
@@ -39,7 +38,6 @@ const loginFn = async (req,res)=>{
                 return res.status(400).send({message: 'Password is incorrect'});
             }
         }
-        
     } catch (error) {
         return res.status(500).send({message: error.message});
     }
@@ -56,10 +54,6 @@ const checkUserByToken = async (req, res) => {
         return res.status(500).send({message: error.message});
     }
 }
-
-
-
-
 
 module.exports = {
     signUpFn,
