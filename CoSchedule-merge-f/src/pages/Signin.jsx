@@ -9,7 +9,6 @@ const Signin = () => {
     const [password, setPassword] = useState("");
     const navigate = useNavigate();
 
-
     const handleSubmit = async (e) => {
         e.preventDefault();
         const body = {
@@ -34,16 +33,9 @@ const Signin = () => {
             alert(response.message);
             navigate("/Home");  
           }
-       
-          
-    
         } catch (error) {
           console.log(error);
-        }
-    
-            
-            
-        
+        }   
     };
 
     return (
