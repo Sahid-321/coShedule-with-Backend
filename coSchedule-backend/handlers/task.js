@@ -9,9 +9,8 @@ try {
     return res.status(200).send(post);
 } catch (error) {
     return res.status(500).send({message: error.message});
+  }
 }
-}
-
 const createtask = async (req,res)=>{
     try {
         const {token} = req.headers;
@@ -26,7 +25,6 @@ const createtask = async (req,res)=>{
         return res.status(500).send({message: error.message});
     }
 }
-
 
 module.exports = {
     getalltask,
