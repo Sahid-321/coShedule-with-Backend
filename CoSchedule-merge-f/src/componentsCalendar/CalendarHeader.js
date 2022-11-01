@@ -26,7 +26,7 @@ export default function CalendarHeader() {
       <button
         onClick={handleReset}
         className="border rounded py-2 px-4 mr-5"
-      >
+       >
         Today
       </button>
       <button onClick={handlePrevMonth}>
