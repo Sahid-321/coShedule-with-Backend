@@ -22,12 +22,11 @@ export const Taskpanel = ()=> {
   const [matches, setMatches] = useState(
     window.matchMedia("(min-width: 768px)").matches
   )
-
   useEffect(() => {
     window
     .matchMedia("(min-width: 768px)")
     .addEventListener('change', e => setMatches( e.matches ));
-  }, []);
+  },[]);
     return (
         <Box  display = "flex"  flexDirection = "column" w={matches ? "65%" : "100%"}>
         <Flex style={{alignItems : "center"}}>
@@ -38,7 +37,6 @@ export const Taskpanel = ()=> {
         
         <Gettingstarted />
         <Box
-          
           borderWidth="1px"
           rounded="lg"
           shadow="lg"
@@ -49,12 +47,5 @@ export const Taskpanel = ()=> {
       </Box>
         </Box>
   
-    )
-         
-            
-             
-          
-          
-         
-    
+    )   
 }
